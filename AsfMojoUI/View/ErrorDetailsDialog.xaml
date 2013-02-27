@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="AsfMojoUI.View.ErrorDetailsDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:asfView="clr-namespace:AsfMojoUI.View"
+             mc:Ignorable="d"
+             DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Opacity="1" Background="{x:Null}">
+        <Rectangle Name="MainRectangle" Style="{DynamicResource DialogOverlayStyle}" Margin="0,0,0,0"/>
+        <Border Width="400" Height="250" Background="White" Style="{DynamicResource DialogBorderStyle}">
+            <StackPanel Background="White" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                <StackPanel Margin="20" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Image Source="..\images\monkey_icon_sad.png" Width="42"/>
+                    <TextBlock Margin="5" FontFamily="Arial" FontWeight="Bold" FontSize="16">There was a problem...</TextBlock>
+                </StackPanel>
+                <ListView ItemsSource="{Binding FileErrorDetails}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemContainerStyle="{DynamicResource ErrorListEntry}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn HeaderContainerStyle="{StaticResource ErrorListHeader}" Header="Error" Width="170" DisplayMemberBinding="{Binding Path=ErrorType}"/>
+                            <GridViewColumn HeaderContainerStyle="{StaticResource ErrorListHeader}" Header="Source" Width="Auto" DisplayMemberBinding="{Binding Path=ErrorDetails}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Button VerticalAlignment="Bottom" Margin="10" Width="100" Content="Ok" Command="{Binding Path=ShowErrorDetailsCommand}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Drawing;
+
+namespace AsfMojo.Media
+{
+    public static class AsfMojoHelper
+    {
+
+        //public static IWaveMemoryStreamProperties From(this IWaveMemoryStreamProperties waveStream, double offset)
+        //{
+        //    waveStream.StartOffset = offset;
+        //    return waveStream;
+        //}
+
+        //public static WaveMemoryStream To(this IWaveMemoryStreamProperties waveStream, double offset)
+        //{
+        //    if (waveStream.StartOffset == null)
+        //        throw new ArgumentException("Must have a valid start offset");
+            
+        //    waveStream.EndOffset = offset;
+        //    return WaveMemoryStream.FromFile(waveStream.FileName, waveStream.StartOffset.Value, waveStream.EndOffset.Value);
+        //}
+    }
+}

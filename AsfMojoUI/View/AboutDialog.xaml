@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="AsfMojoUI.View.AboutDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:asfView="clr-namespace:AsfMojoUI.View"
+             mc:Ignorable="d"
+             DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Opacity="1" Background="{x:Null}">
+        <Rectangle Name="MainRectangle" Margin="0,0,0,0" Style="{DynamicResource DialogOverlayStyle}"/>
+        <Border CornerRadius="35" Width="200" Height="200" BorderBrush="Black" Background="White" Padding="15">
+            <StackPanel HorizontalAlignment="Center" Background="White" VerticalAlignment="Center">
+                <TextBlock Margin="10" FontFamily="Arial" FontWeight="Bold" FontSize="24">ASFMojo 1.0</TextBlock>
+                <Image Source="..\images\monkey_icon.png" Width="43"/>
+                <TextBlock Margin="10" FontFamily="Arial" VerticalAlignment="Center" FontSize="12">Michael Knapp  - 2010</TextBlock>
+                <Button Content="Ok" Command="{Binding Path=ShowAboutDialogCommand}"/>
+            </StackPanel>
+        </Border>            
+    </Grid>
+</UserControl>

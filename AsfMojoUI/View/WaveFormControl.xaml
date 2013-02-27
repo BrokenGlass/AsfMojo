@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="AsfMojoUI.View.WaveFormControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             BorderBrush="Black" BorderThickness="1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" x:Name="mainCanvas" Background="#FF151595">
+        </Canvas>
+        <Button Grid.Row="1" Name="WaveFormPlayButton" HorizontalAlignment="Center"  Click="WaveFormPlayButton_Click" Margin="2" Width="50" ToolTip="Play">
+            <StackPanel>
+                <Path Fill="DarkGreen" Margin="3" Width="10" Height="10" Data="M 0,0 L 1,1 L 0,2 Z" Stretch="Fill" StrokeLineJoin="Round"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</UserControl>

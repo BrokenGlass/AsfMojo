@@ -1,0 +1,9 @@
+﻿AsfMojo is an open source .NET ASF parsing library, providing support for parsing WMA audio and WMV video files.  It offers classes to create streams from packet data within a media file, gather file statistics and extract audio segments or frame accurate still frames. The library parses ASF objects as per the ASF specification revision 01.20.05
+
+AsfMojo comes with a WPF UI application and a command line utility application that both make use of the AsMojo library. 
+
+The AsfMojo WPF UI app is a full fledged ASF Parser offering a simple but powerful interface into the structure of ASF files down to the packet level. Still frames and audio for every payload can be previewed.
+
+The AsMojo command line utility offers a few streamlined options to access the AsfMojo library, such as caluclating the play duration of a file, creating thumb images from an offset within a media file or extracting a WAVE file from a time range within a media file.
+
+

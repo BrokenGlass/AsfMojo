@@ -1,0 +1,68 @@
+
+AsfMojo library:
+
+1.0: Initial release
+
+==========================================
+
+1.01 bug fixes:
+ - changed initialization behavior of AsfImage/AsfFile to throw appropriate Exceptions when passed illegal parameters
+ - fixed a bug in AsfAudio GetSamples() iterator that would cause it to deliver less audio samples than expected
+ - fixed a bug in AsfAudio GetSampleBytes()  that would cause it to return more sample bytes than expected
+ - fixed a bug in AsfFile that would allow Read() operations past the end of the bounds defined by the AsfStream
+
+1.01 feature additions:
+ - added support for 
+   ASF_Index_Object
+   ASF_Script_Command_Object 
+
+AsfMojo UI
+1.0: Initial release
+1.01 bug fixes:
+ - fixed a bug in AsfInfo class that caused an application crash when opening a zero byte file
+
+1.01 feature additions:
+ - added support for 
+   Asf Index Object
+   Asf Script Command Object
+ 
+ 
+ AsfMojo Cmd
+ 1.0: Initial release
+1.01 feature additions:
+ - added parameter usage printout with examples
+
+
+ AsfMojo Test
+   1.01: Initial release
+ 
+==========================================
+
+AsfMojo library:
+
+1.2 bug fixes:
+ - fixed AsfPacket error correction data parsing 
+ - fixed Dispose implementation in AsfFile so it wouldn't keep holding a file lock
+ - added appropriate using blocks in AsfAudio
+ - fixed AsfPacket error correction detection
+ - fixed Duration attribute calculation in Configuration class
+ - fixed end offset calculation for packet range using AsfDataObject, this would exceptions when trying to parse packets in positions not covered by the AsfDataObject.
+ 
+1.2 feature additions:
+ - added ability to update content properties (Author, Title, Description, Copyright)
+ - provide simplified interface to create image / wave stream as well as a fluent alternative
+
+ AsfMojo Cmd
+1.2 changes:
+ - simplified existing functionality using new fluent/static interface to create image, wave stream
+
+1.2 feature additions:
+ - added ability to update content properties (Author, Title, Description, Copyright)
+
+AsfMojo UI
+ 1.2 bug fixes:
+  - fixed display bug in TimeToDisplayConverter which did cut off hours
+  - fixed a bug in displaying preview images
+
+1.2 feature additions:
+ - added ability to update content properties (Author, Title, Description, Copyright, Rating)
